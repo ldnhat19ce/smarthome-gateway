@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import asyncio
 import sys
 
@@ -75,7 +77,7 @@ def postData(data, header, url):
     requests.post(url, headers=header, json=data)
        
 if __name__ == "__main__":
-    cred = credentials.Certificate('smarthome-3db14-firebase-adminsdk-gz6fg-d587bc5a17.json')
+    cred = credentials.Certificate('/home/pi/ble/smarthome-3db14-firebase-adminsdk-gz6fg-d587bc5a17.json')
     app = firebase_admin.initialize_app(cred)
 
     db = firestore.client()

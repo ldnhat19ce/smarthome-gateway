@@ -1,0 +1,12 @@
+[Unit]
+Descripion=Ble connect
+After=multi-user.target
+
+[Service]
+User=pi
+Type=simple
+WorkingDirectory=/home/pi/ble/
+ExecStart=/usr/bin/python3 ble_connect.py
+
+[Install]
+WantedBy=multi-user.target
